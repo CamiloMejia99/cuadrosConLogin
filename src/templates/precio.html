@@ -1,0 +1,169 @@
+{% extends './base.html' %} 
+
+
+{% block body %} 
+
+<div class="wrapper">
+
+    <div class="preloader flex-column justify-content-center align-items-center">
+        <img class="animation__shake" src="../static/img/logonegro.png" alt="C&C" height="150" width="150">
+    </div>
+
+    <nav class="main-header navbar navbar-expand navbar-blue navbar-dark">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="navbar-search" role="button">
+                    
+                    <i class="fas fa-search"></i>&nbsp&nbsp
+                    <i class="fas fa-shopping-cart"></i>&nbsp&nbsp
+                    <i class="fas fa-user-slash"></i>
+                </a>
+                <div class="navbar-search-block">
+                    <form class="form-inline">
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-navbar" type="search" placeholder="Buscar" aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-navbar" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <aside class="main-sidebar sidebar-dark-info elevation-4">
+        <a href="{{ url_for('home')}}" class="brand-link">
+            <img src="../static/img/CycLogo.png" alt="C&C logo" class="brand-image img-circle elevation-3">
+            <span class="brand-text font-weight-light">C&C</span>
+        </a>
+
+        <div class="sidebar">
+
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <li class="nav-item menu-close">
+                        <a href="" class="nav-link active">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Opciones
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ url_for('list')}}" class="nav-link">
+                                    <i class="nav-icon fas fa-star"></i>
+                                    <p>Cuadros</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url_for('precio')}}" class="nav-link">
+                                    <i class="nav-icon fas fa-store"></i>
+                                    <p>Consulta precio</p>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('contactos')}}" class="nav-link">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>Contactanos</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ url_for('quejas')}}" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>Quejas y reclamos</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!--*******************************************inicio contenido ventanas****************************************************--> 
+
+    <div class="content-wrapper" style="background-image: url('../static/img/fondo4.png');">
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+
+                    <br><br>
+                    <div id="contenedor" class="col-12" align="center">
+                        <div id="contenedor2" class="col-9" align="left">
+                            <div class="card border-info">
+                                <div class="card-body">
+                                    <ul class="list-group list-group-light">
+                                        <li class="list-group-item">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <section class="content">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <form class="was-validated">
+                                                                        <div class="card2 card-primary">
+
+                                                                            <div class="card-header">
+                                                                                <h3 class="card-title">Consulta el precio</h3>
+                                                                            </div>
+                                                                            <div class="container " style="background-color: #BFC4C4;" align="center">
+                                                                                <img src="../static/img/proxim.png" alt="Facebook">
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+<!--*******************************************fin contenido ventanas****************************************************--> 
+
+<footer>
+    <a class="appWhatsapp" href="https://wa.me/message/BH3BJKU6EVRON1"  onmousedown="btnwpp.play()" target="_blank">
+        <img src="../static/img/logowpp.png" alt="WhatsApp"> 
+    </a>
+    <div id="fb-root"></div>
+</footer>         
+
+</section>
+
+</div>
+
+<footer class="main-footer">
+    <strong>Copyright &copy; 2023 <a href="https://www.facebook.com/Cuadrosymascuadros999"  target="_blank">@Cuadrosymascuadros999</a>.</strong> Todos los derechos reservados.
+    <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 1.0.0
+    </div>
+</footer>
+
+<aside class="control-sidebar control-sidebar-dark">
+</aside>
+
+</div>
+{% endblock %}
